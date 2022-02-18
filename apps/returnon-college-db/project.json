@@ -1,0 +1,195 @@
+{
+  "root": "apps/returnon-college-db",
+  "sourceRoot": "apps/returnon-college-db/src",
+  "projectType": "application",
+  "targets": {
+    "dev": {
+      "executor": "nx-plugin-workspace:exec",
+      "options": {
+        "command": "npm run dev",
+        "cwd": "apps/returnon-college-db",
+        "parallel": false,
+        "color": true,
+        "useCamelCase": false,
+        "useLocalPackage": true,
+        "shell": true
+      }
+    },
+    "build": {
+      "executor": "nx-plugin-workspace:exec",
+      "options": {
+        "command": "npm run dev",
+        "cwd": "apps/returnon-college-db",
+        "parallel": false,
+        "color": true,
+        "useCamelCase": false,
+        "useLocalPackage": true,
+        "shell": true,
+        "outputPath": "apps/returnon-college-db/dist"
+      }
+    },
+    "start": {
+      "executor": "nx-plugin-workspace:exec",
+      "options": {
+        "command": "npm run dev",
+        "cwd": "apps/returnon-college-db",
+        "parallel": false,
+        "color": true,
+        "useCamelCase": false,
+        "useLocalPackage": true,
+        "shell": true
+      }
+    },
+    "prisma-db-push": {
+      "executor": "nx-plugin-workspace:exec",
+      "options": {
+        "command": "prisma db push",
+        "cwd": "apps/returnon-college-db",
+        "parallel": false,
+        "color": true,
+        "envFile": "apps/returnon-college-db/.env",
+        "outputPath": "apps/returnon-college-db/src/app/prisma",
+        "useCamelCase": false,
+        "useLocalPackage": true,
+        "shell": true,
+        "ignoreFalsy": true,
+        "schema": "src/app/prisma/schema.prisma",
+        "forceReset": false,
+        "acceptDataLoss": false
+      }
+    },
+    "prisma-db-pull": {
+      "executor": "nx-plugin-workspace:exec",
+      "options": {
+        "command": "prisma db pull",
+        "cwd": "apps/returnon-college-db",
+        "parallel": false,
+        "color": true,
+        "envFile": "apps/returnon-college-db/.env",
+        "outputPath": "apps/returnon-college-db/src/app/prisma",
+        "useCamelCase": false,
+        "useLocalPackage": true,
+        "shell": true,
+        "ignoreFalsy": true,
+        "schema": "src/app/prisma/schema.prisma"
+      }
+    },
+    "prisma-generate": {
+      "executor": "nx-plugin-workspace:exec",
+      "options": {
+        "command": "prisma generate",
+        "cwd": "apps/returnon-college-db",
+        "parallel": false,
+        "color": true,
+        "envFile": "apps/returnon-college-db/.env",
+        "outputPath": "apps/returnon-college-db/src/app/prisma",
+        "useCamelCase": false,
+        "useLocalPackage": true,
+        "shell": true,
+        "ignoreFalsy": true,
+        "schema": "src/app/prisma/schema.prisma"
+      }
+    },
+    "prisma-format": {
+      "executor": "nx-plugin-workspace:exec",
+      "options": {
+        "command": "prisma format",
+        "cwd": "apps/returnon-college-db",
+        "parallel": false,
+        "color": true,
+        "envFile": "apps/returnon-college-db/.env",
+        "outputPath": "apps/returnon-college-db/src/app/prisma",
+        "useCamelCase": false,
+        "useLocalPackage": true,
+        "shell": true,
+        "ignoreFalsy": true,
+        "schema": "src/app/prisma/schema.prisma"
+      }
+    },
+    "prisma-studio": {
+      "executor": "nx-plugin-workspace:exec",
+      "options": {
+        "command": "prisma studio",
+        "cwd": "apps/returnon-college-db",
+        "parallel": false,
+        "color": true,
+        "envFile": "apps/returnon-college-db/.env",
+        "outputPath": "apps/returnon-college-db/src/app/prisma",
+        "useCamelCase": false,
+        "useLocalPackage": true,
+        "shell": true,
+        "ignoreFalsy": true,
+        "schema": "src/app/prisma/schema.prisma",
+        "browser": "chrome",
+        "port": 7777
+      }
+    },
+    "prisma-migrate-reset": {
+      "executor": "nx-plugin-workspace:exec",
+      "options": {
+        "command": "prisma migrate reset",
+        "cwd": "apps/returnon-college-db",
+        "parallel": false,
+        "color": true,
+        "envFile": "apps/returnon-college-db/.env",
+        "outputPath": "apps/returnon-college-db/src/app/prisma",
+        "useCamelCase": false,
+        "useLocalPackage": true,
+        "shell": true,
+        "ignoreFalsy": true,
+        "schema": "src/app/prisma/schema.prisma"
+      }
+    },
+    "prisma-migrate-deploy": {
+      "executor": "nx-plugin-workspace:exec",
+      "options": {
+        "command": "prisma migrate deploy",
+        "cwd": "apps/returnon-college-db",
+        "parallel": false,
+        "color": true,
+        "envFile": "apps/returnon-college-db/.env",
+        "outputPath": "apps/returnon-college-db/src/app/prisma",
+        "useCamelCase": false,
+        "useLocalPackage": true,
+        "shell": true,
+        "ignoreFalsy": true,
+        "schema": "src/app/prisma/schema.prisma"
+      }
+    },
+    "prisma-migrate-status": {
+      "executor": "nx-plugin-workspace:exec",
+      "options": {
+        "command": "prisma migrate status",
+        "cwd": "apps/returnon-college-db",
+        "parallel": false,
+        "color": true,
+        "envFile": "apps/returnon-college-db/.env",
+        "outputPath": "apps/returnon-college-db/src/app/prisma",
+        "useCamelCase": false,
+        "useLocalPackage": true,
+        "shell": true,
+        "ignoreFalsy": true,
+        "schema": "src/app/prisma/schema.prisma"
+      }
+    },
+    "info": {
+      "executor": "nx-plugin-prisma:info",
+      "options": {}
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/returnon-college-db/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/returnon-college-db"],
+      "options": {
+        "jestConfig": "apps/returnon-college-db/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
